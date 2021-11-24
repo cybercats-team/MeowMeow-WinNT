@@ -6,10 +6,13 @@
 
 #include "targetver.h"
 
+// C/C++ Standard Library
+#include <stdlib.h>
+
+// SFML
+#include <SFML/Graphics.hpp>
+
 // Exclude rarely-used stuff from Windows headers
 #define WIN32_LEAN_AND_MEAN             
 // Windows Header Files
 #include <windows.h>
-
-// C/C++ Standard Library
-#include <stdlib.h>
