@@ -1,3 +1,6 @@
 [submodule "Framework"]
 	path = Framework
 	url = git@github.com:cybercats-team/MeowMeow.git
+[submodule "Resource"]
+	path = Resource
+	url = git@github.com:cybercats-team/MeowMeow-Resources.git
