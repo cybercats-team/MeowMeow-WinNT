@@ -2,6 +2,7 @@
 //
 
 #include "framework.h"
+#include "ResourcePath.h"
 #include "MeowMeow.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -9,29 +10,34 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ LPWSTR    lpCmdLine,
                      _In_ int       nCmdShow)
 {
-    UNREFERENCED_PARAMETER(hInstance);
-    UNREFERENCED_PARAMETER(hPrevInstance);
-    UNREFERENCED_PARAMETER(lpCmdLine);
-    UNREFERENCED_PARAMETER(nCmdShow);
+  UNREFERENCED_PARAMETER(hInstance);
+  UNREFERENCED_PARAMETER(hPrevInstance);
+  UNREFERENCED_PARAMETER(lpCmdLine);
+  UNREFERENCED_PARAMETER(nCmdShow);
 
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+  // TODO: create OS-specific API class wrapper
+#ifdef DEBUG
+  using namespace std;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+  ostringstream nlStream;
+  nlStream << endl;
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+  const string& nl = nlStream.str();
+  
+  DebugLogger::setCustomLogger([&nl](const string& message) -> void {
+    string messageWithEndline = message + nl;
+    LPCSTR messageCString = messageWithEndline.c_str();
 
-    return EXIT_SUCCESS;
+    OutputDebugStringA(messageCString);
+  });
+#endif
+
+  Application app("Meow Meow :: Turkey Hunter", resourcePath());
+
+  if (!app.initialize()) {
+    return EXIT_FAILURE;
+  }
+
+  app.run();
+  return EXIT_SUCCESS;
 }
- 

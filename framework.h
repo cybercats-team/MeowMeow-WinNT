@@ -8,9 +8,10 @@
 
 // C/C++ Standard Library
 #include <stdlib.h>
+#include <sstream>
 
-// SFML
-#include <SFML/Graphics.hpp>
+// Framework
+#include "Framework/Application.h"
 
 // Exclude rarely-used stuff from Windows headers
 #define WIN32_LEAN_AND_MEAN             
