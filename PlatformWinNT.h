@@ -5,9 +5,6 @@
 class PlatformWinNT 
   : public Platform 
 {
-  private:
-    std::string resourcePathString;
-  public:
-    PlatformWinNT();
-    const std::string& resourcePath() override;
+  protected:
+    const std::string getResourcePath() override;
 };

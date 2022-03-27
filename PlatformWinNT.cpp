@@ -1,6 +1,6 @@
 #include "PlatformWinNT.h"
 
-PlatformWinNT::PlatformWinNT() : Platform(), resourcePathString() {
+const std::string PlatformWinNT::getResourcePath() {
   using namespace std;
   using namespace std::filesystem;
 
@@ -17,9 +17,6 @@ PlatformWinNT::PlatformWinNT() : Platform(), resourcePathString() {
   
   resourcePath /= "Resource";
   resourcePath += path::preferred_separator;
-  resourcePathString = resourcePath.string();
-}
-
-const std::string& PlatformWinNT::resourcePath() {
-  return resourcePathString;
+  
+  return resourcePath.string();
 }
