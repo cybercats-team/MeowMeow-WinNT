@@ -2,7 +2,7 @@
 //
 
 #include "framework.h"
-#include "ResourcePath.h"
+#include "PlatformWinNT.h"
 #include "MeowMeow.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -19,20 +19,17 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 #ifdef DEBUG
   using namespace std;
 
-  ostringstream nlStream;
-  nlStream << endl;
-
-  const string& nl = nlStream.str();
+  PlatformWinNT platform{};
   
-  DebugLogger::setCustomLogger([&nl](const string& message) -> void {
-    string messageWithEndline = message + nl;
+  DebugLogger::setCustomLogger([&platform](const string& message) -> void {
+    string messageWithEndline = message + platform.nl();
     LPCSTR messageCString = messageWithEndline.c_str();
 
     OutputDebugStringA(messageCString);
   });
 #endif
 
-  Application app("Meow Meow :: Turkey Hunter", resourcePath());
+  Application app("Meow Meow :: Turkey Hunter", platform.resourcePath());
 
   if (!app.initialize()) {
     return EXIT_FAILURE;
@@ -41,3 +38,4 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   app.run();
   return EXIT_SUCCESS;
 }
+

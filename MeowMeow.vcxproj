@@ -162,7 +162,8 @@
     <ClInclude Include="Framework\Container.h" />
     <ClInclude Include="Framework\controllers\LevelController.h" />
     <ClInclude Include="Framework\controllers\SplashController.h" />
-    <ClInclude Include="Framework\Debug.h" />
+    <ClInclude Include="Framework\interfaces\Platform.h" />
+    <ClInclude Include="Framework\utils\Debug.h" />
     <ClInclude Include="Framework\interfaces\Animatable.h" />
     <ClInclude Include="Framework\interfaces\BundleManager.h" />
     <ClInclude Include="Framework\interfaces\Controller.h" />
@@ -185,8 +186,8 @@
     <ClInclude Include="Framework\utils\Array.h" />
     <ClInclude Include="Framework\utils\Math.h" />
     <ClInclude Include="MeowMeow.h" />
+    <ClInclude Include="PlatformWinNT.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="ResourcePath.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -194,7 +195,7 @@
     <ClCompile Include="Framework\Container.cpp" />
     <ClCompile Include="Framework\controllers\LevelController.cpp" />
     <ClCompile Include="Framework\controllers\SplashController.cpp" />
-    <ClCompile Include="Framework\Debug.cpp" />
+    <ClCompile Include="Framework\utils\Debug.cpp" />
     <ClCompile Include="Framework\primitives\LevelMap.cpp" />
     <ClCompile Include="Framework\primitives\LevelRealm.cpp" />
     <ClCompile Include="Framework\primitives\Screen.cpp" />
@@ -206,7 +207,7 @@
     <ClCompile Include="Framework\services\SpriteManager.cpp" />
     <ClCompile Include="Framework\ui\SceneController.cpp" />
     <ClCompile Include="MeowMeow.cpp" />
-    <ClCompile Include="ResourcePath.cpp" />
+    <ClCompile Include="PlatformWinNT.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MeowMeow.rc" />

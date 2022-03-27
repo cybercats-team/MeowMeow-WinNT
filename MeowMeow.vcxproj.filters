@@ -102,10 +102,13 @@
     <ClInclude Include="Framework\Container.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Framework\Debug.h">
+    <ClInclude Include="Framework\utils\Debug.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ResourcePath.h">
+    <ClInclude Include="Framework\interfaces\Platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlatformWinNT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -155,10 +158,10 @@
     <ClCompile Include="Framework\Container.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ResourcePath.cpp">
+    <ClCompile Include="Framework\utils\Debug.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Framework\Debug.cpp">
+    <ClCompile Include="PlatformWinNT.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

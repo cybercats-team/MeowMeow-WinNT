@@ -9,6 +9,7 @@
 // C/C++ Standard Library
 #include <stdlib.h>
 #include <sstream>
+#include <filesystem>
 
 // Framework
 #include "Framework/Application.h"
