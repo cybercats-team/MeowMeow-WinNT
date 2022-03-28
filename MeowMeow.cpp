@@ -29,7 +29,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   });
 #endif
 
-  Application app("Meow Meow :: Turkey Hunter", platform.resourcePath());
+  Application app("Meow Meow :: Turkey Hunter", platform);
 
   if (!app.initialize()) {
     return EXIT_FAILURE;
