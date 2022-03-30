@@ -17,7 +17,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   
   PlatformWinNT platform{};
   
-  // TODO: create OS-specific API class wrapper
 #ifdef DEBUG
   using namespace std;
   
