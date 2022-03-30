@@ -18,14 +18,14 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   PlatformWinNT platform{};
   
 #ifdef DEBUG
-  using namespace std;
+  /*using namespace std;
   
   DebugLogger::setCustomLogger([&platform](const string& message) -> void {
     string messageWithEndline = message + platform.nl();
     LPCSTR messageCString = messageWithEndline.c_str();
 
     OutputDebugStringA(messageCString);
-  });
+  });*/
 #endif
 
   Application app("Meow Meow :: Turkey Hunter", platform);

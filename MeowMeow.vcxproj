@@ -188,6 +188,7 @@
     <ClInclude Include="MeowMeow.h" />
     <ClInclude Include="PlatformWinNT.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="Framework\utils\String.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
