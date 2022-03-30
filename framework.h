@@ -8,6 +8,7 @@
 
 // C/C++ Standard Library
 #include <stdlib.h>
+#include <string>
 #include <filesystem>
 
 // Framework

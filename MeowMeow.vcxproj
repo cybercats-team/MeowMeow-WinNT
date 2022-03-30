@@ -186,6 +186,7 @@
     <ClInclude Include="Framework\utils\Array.h" />
     <ClInclude Include="Framework\utils\Math.h" />
     <ClInclude Include="MeowMeow.h" />
+    <ClInclude Include="PlatformLogger.h" />
     <ClInclude Include="PlatformWinNT.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Framework\utils\String.h" />
@@ -208,6 +209,7 @@
     <ClCompile Include="Framework\services\SpriteManager.cpp" />
     <ClCompile Include="Framework\ui\SceneController.cpp" />
     <ClCompile Include="MeowMeow.cpp" />
+    <ClCompile Include="PlatformLogger.cpp" />
     <ClCompile Include="PlatformWinNT.cpp" />
   </ItemGroup>
   <ItemGroup>

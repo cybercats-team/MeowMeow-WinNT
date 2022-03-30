@@ -114,6 +114,9 @@
     <ClInclude Include="Framework\utils\String.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PlatformLogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MeowMeow.cpp">
@@ -165,6 +168,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlatformWinNT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlatformLogger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

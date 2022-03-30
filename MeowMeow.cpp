@@ -3,6 +3,9 @@
 
 #include "framework.h"
 #include "PlatformWinNT.h"
+#ifdef DEBUG
+#include "PlatformLogger.h"
+#endif
 #include "MeowMeow.h"
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
@@ -15,17 +18,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   UNREFERENCED_PARAMETER(lpCmdLine);
   UNREFERENCED_PARAMETER(nCmdShow);
   
-  PlatformWinNT platform{};
-  
+  PlatformWinNT platform{};  
 #ifdef DEBUG
-  /*using namespace std;
-  
-  DebugLogger::setCustomLogger([&platform](const string& message) -> void {
-    string messageWithEndline = message + platform.nl();
-    LPCSTR messageCString = messageWithEndline.c_str();
+  PlatformLogger logger(platform);
 
-    OutputDebugStringA(messageCString);
-  });*/
+  Debug::setCustomLogger(logger);
 #endif
 
   Application app("Meow Meow :: Turkey Hunter", platform);
