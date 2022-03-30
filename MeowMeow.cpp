@@ -14,12 +14,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
   UNREFERENCED_PARAMETER(hPrevInstance);
   UNREFERENCED_PARAMETER(lpCmdLine);
   UNREFERENCED_PARAMETER(nCmdShow);
-
+  
+  PlatformWinNT platform{};
+  
   // TODO: create OS-specific API class wrapper
 #ifdef DEBUG
   using namespace std;
-
-  PlatformWinNT platform{};
   
   DebugLogger::setCustomLogger([&platform](const string& message) -> void {
     string messageWithEndline = message + platform.nl();
