@@ -159,10 +159,14 @@
   <ItemGroup>
     <ClInclude Include="framework.h" />
     <ClInclude Include="Framework\Application.h" />
-    <ClInclude Include="Framework\Container.h" />
     <ClInclude Include="Framework\controllers\LevelController.h" />
     <ClInclude Include="Framework\controllers\SplashController.h" />
+    <ClInclude Include="Framework\interfaces\Initializable.h" />
     <ClInclude Include="Framework\interfaces\Platform.h" />
+    <ClInclude Include="Framework\interfaces\Renderable.h" />
+    <ClInclude Include="Framework\services\EventManager.h" />
+    <ClInclude Include="Framework\services\Renderer.h" />
+    <ClInclude Include="Framework\services\StateManager.h" />
     <ClInclude Include="Framework\utils\Debug.h" />
     <ClInclude Include="Framework\interfaces\Animatable.h" />
     <ClInclude Include="Framework\interfaces\BundleManager.h" />
@@ -194,9 +198,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\Application.cpp" />
-    <ClCompile Include="Framework\Container.cpp" />
     <ClCompile Include="Framework\controllers\LevelController.cpp" />
     <ClCompile Include="Framework\controllers\SplashController.cpp" />
+    <ClCompile Include="Framework\services\EventManager.cpp" />
+    <ClCompile Include="Framework\services\Renderer.cpp" />
+    <ClCompile Include="Framework\services\StateManager.cpp" />
     <ClCompile Include="Framework\utils\Debug.cpp" />
     <ClCompile Include="Framework\primitives\LevelMap.cpp" />
     <ClCompile Include="Framework\primitives\LevelRealm.cpp" />

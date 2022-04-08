@@ -22,7 +22,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 #ifdef DEBUG
   PlatformLogger logger(platform);
 
-  Debug::setCustomLogger(logger);
+  Debug::customize.setLogger(logger);
 #endif
 
   Application app("Meow Meow :: Turkey Hunter", platform);
